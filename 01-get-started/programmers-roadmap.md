@@ -2,7 +2,7 @@
 
 Hi!
 
-If you're an experienced developer, you may want to watch only the following lectures. If you follow this roadmap, you will need to watch about 50 lectures instead of 180 lectures.
+If you're an experienced developer, you may want to watch only the following lectures from the Udemy. If you follow this roadmap, you will need to watch about 50 lectures instead of 180 lectures.
 
 This course starts from the most basics than advances toward the end, step by step. So, the complexity of the topics increases on each level. I've intentionally designed it so to make it easy for everyone. 
 
@@ -72,15 +72,38 @@ Enjoy!
 
 ## What Go is used for?
 
-Go is used mostly by web companies: Google, Facebook, Twitter, Uber, Apple, Dropbox, Soundcloud, Medium, Mozilla Firefox, Github, Docker, Kubernetes, and Heroku.
+Go is used mostly by web companies: 
+* Google
+* Facebook
+* Twitter
+* Uber
+* Apple
+* Dropbox
+* Soundcloud
+* Medium
+* Mozilla Firefox
+* Github
+* Docker
+* Kubernetes
+* and Heroku.
 
-**Go is best for:** Cross-Platform Command-line Tools, Distributed Network Applications, Cloud technologies like Microservices and Serverless, Web APIs, Database Engines, Big-Data Processing Pipelines, Embedded Development, and so on.
+**Go is best for:**
+* Cross-Platform Command-line Tools
+* Distributed Network Applications
+* Cloud technologies like Microservices and Serverless
+* Web APIs, Database Engines
+* Big-Data Processing Pipelines
+* Embedded Development, and so on.
 
-**Go is not best for (but doable):** Desktop Apps, Writing Operating Systems, Kernel Drivers, Game Development, etc.
+**Go is not best for (but doable):** 
+* Desktop Apps
+* Writing Operating Systems
+* Kernel Drivers
+* Game Development, etc.
 
 ## Who Designed Go?
 
-Go designed by one of the most influential people in the industry:
+Go is designed some of the most influential people in the industry:
 
 * Unix: Ken Thompson
 * UTF-8, Plan 9: Rob Pike

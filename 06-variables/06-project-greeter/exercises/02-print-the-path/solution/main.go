@@ -17,6 +17,8 @@ import (
 //
 // Compile it by typing:
 //   go build -o myprogram
+// Compile it by typing (Windows:
+//   go build -o myprogram.exe
 //
 // Then run it by typing:
 //   ./myprogram

@@ -31,14 +31,23 @@ func main() {
 	// \n equals to newline character
 	// \" equals to double-quotes character
 
-	json := "\n" +
+	/*	json := "\n" +
 		"{\n" +
 		"\t\"Items\": [{\n" +
 		"\t\t\"Item\": {\n" +
 		"\t\t\t\"name\": \"Teddy Bear\"\n" +
 		"\t\t}\n" +
 		"\t}]\n" +
-		"}\n"
+		"}\n"*/
+
+	json := `
+{
+        "Items": [{
+                "Item": {
+                        "name": "Teddy Bear"
+                }
+        }]
+}`
 
 	fmt.Println(json)
 }

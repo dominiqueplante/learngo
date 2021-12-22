@@ -26,10 +26,22 @@ import "fmt"
 // ---------------------------------------------------------
 
 func main() {
-	const (
+	/*const (
 		Nov = 11
 		Oct = 10
 		Sep = 9
+	)*/
+
+	//const (
+	//	Sep = iota + 9
+	//	Oct
+	//	Nov
+	//)
+
+	const (
+		Nov = 11 - iota
+		Oct
+		Sep
 	)
 
 	fmt.Println(Sep, Oct, Nov)

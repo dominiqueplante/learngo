@@ -51,6 +51,8 @@ const (
 	accessOK = "Access granted to %q.\n"
 	user     = "jack"
 	pass     = "1888"
+	user2    = "inanc"
+	pass2    = "1879"
 )
 
 func main() {
@@ -61,13 +63,18 @@ func main() {
 		return
 	}
 
+	// u, p :="hacker", "42"
+	// u, p :="jack", "1888"
+	// u, p :="inanc", "1879"
 	u, p := args[1], args[2]
 
-	if u != user {
+	if u != user && u != user2 {
 		fmt.Printf(errUser, u)
-	} else if p != pass {
-		fmt.Printf(errPwd, u)
-	} else {
+	} else if u == user && p == pass {
 		fmt.Printf(accessOK, u)
+	} else if u == user2 && p == pass2 {
+		fmt.Printf(accessOK, u)
+	} else {
+		fmt.Printf(errPwd, u)
 	}
 }

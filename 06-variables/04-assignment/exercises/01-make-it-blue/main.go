@@ -7,6 +7,9 @@
 // Follow me on twitter: https://twitter.com/inancgumus
 
 package main
+import (
+	"fmt"
+)
 
 import "fmt"
 

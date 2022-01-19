@@ -42,4 +42,7 @@ func main() {
 	fmt.Println("How are you?")
 	// get your name from the command-line
 	// and print it
+	wife := os.Args[1]
+	println(fmt.Println("Hi", wife))
+	println(fmt.Println("How are you?"))
 }

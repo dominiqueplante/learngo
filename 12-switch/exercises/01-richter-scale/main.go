@@ -8,6 +8,12 @@
 
 package main
 
+import (
+	"fmt"
+	"os"
+	"strconv"
+)
+
 // ---------------------------------------------------------
 // STORY
 //  You're curious about the richter scales. When reporters
@@ -71,4 +77,35 @@ package main
 // ---------------------------------------------------------
 
 func main() {
+	if len(os.Args) != 2 {
+		fmt.Println(" Give me the magnitude of the earthquake.")
+		return
+	}
+	richter, err := strconv.ParseFloat(os.Args[1], 64)
+	if err != nil {
+		fmt.Println("I couldn't get that, sorry.")
+		return
+	}
+	var desc string
+	switch r := richter; {
+	case r < 2:
+		desc = "micro"
+	case r < 3:
+		desc = "very minor"
+	case r < 4:
+		desc = "minor"
+	case r < 5:
+		desc = "light"
+	case r < 6:
+		desc = "moderate"
+	case r < 7:
+		desc = "strong"
+	case r < 8:
+		desc = "major"
+	case r < 10:
+		desc = "great"
+	default:
+		desc = "massive"
+	}
+	fmt.Printf("%.2f is %s", richter, desc)
 }

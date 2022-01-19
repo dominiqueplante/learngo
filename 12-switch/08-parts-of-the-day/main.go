@@ -14,6 +14,18 @@ import (
 )
 
 func main() {
+
+	switch h := time.Now().Hour(); {
+	case h >= 18:
+		fmt.Println("Good evening")
+	case h >= 12:
+		fmt.Println("Good afternoon")
+	case h >= 6:
+		fmt.Println("Good morning")
+	case h <= 5:
+		fmt.Println("Good night")
+	}
+
 	// time.Now() gets the current time
 	// and in turn, .Hour() gets the current hour from it
 

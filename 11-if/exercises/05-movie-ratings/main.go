@@ -52,5 +52,25 @@ package main
 //    Wrong age: "-5"
 // ---------------------------------------------------------
 
+import (
+	"fmt"
+	"os"
+	"strconv"
+)
+
 func main() {
+	if a := os.Args; len(a) != 2 {
+		// only a variable
+		fmt.Println("Require age")
+	} else if _, err := strconv.Atoi(a[1]); err != nil {
+		fmt.Printf("Cannot convert %q", a[1])
+	} else if n, _ := strconv.Atoi(a[1]); n < 0 {
+		fmt.Printf("Wrong age: %q", a[1])
+	} else if n, _ := strconv.Atoi(a[1]); n < 13 {
+		fmt.Printf("PG-Rated")
+	} else if n, _ := strconv.Atoi(a[1]); n >= 13 && n <= 17 {
+		fmt.Printf("PG-13")
+	} else if n, _ := strconv.Atoi(a[1]); n > 17 {
+		fmt.Printf("R-Rated")
+	}
 }

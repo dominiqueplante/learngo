@@ -33,6 +33,7 @@ func main() {
 	n := 0.
 
 	// ADD YOUR CODE BELOW
+	n = 3.14 * 2
 
 	// ?
 

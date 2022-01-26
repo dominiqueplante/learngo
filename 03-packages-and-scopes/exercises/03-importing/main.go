@@ -21,12 +21,24 @@ package main
 //  hi
 // ---------------------------------------------------------
 
+// https://scene-si.org/2018/01/25/go-tips-and-tricks-almost-everything-about-imports/
+
 // ?
+
+import "fmt"
+import f "fmt"
+import f2 "fmt"
 // ?
 // ?
 
 func main() {
+	//prt1 := fmt.Println
+	//prt2 := fmt.Println
+	prt3 := fmt.Println
 	// ?
+	f.Println("hello")
+	f2.Println("hey")
+	prt3("i")
 	// ?
 	// ?
 }

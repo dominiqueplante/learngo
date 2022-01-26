@@ -6,3 +6,13 @@
 ## HINT
 
 You should use correct `go doc` tools
+
+
+## Documentation
+Enter
+
+go doc runtime.NumCPU
+
+## Soure code
+
+go doc -src runtime.NumCPU

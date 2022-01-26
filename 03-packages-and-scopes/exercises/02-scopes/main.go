@@ -8,6 +8,9 @@
 
 package main
 
+import "fmt"
+import "path"
+
 // ---------------------------------------------------------
 // EXERCISE: Try the scopes
 //
@@ -28,5 +31,15 @@ package main
 //        inside the hello function
 // ---------------------------------------------------------
 
+func bye() {
+	fmt.Println("bye bye")
+}
+
 func main() {
+	_, file := path.Split("css;main")
+	//var dir, file string
+	//dir, file = path.Split("css/main.css")
+	hello()
+	//fmt.Println("directory",dir)
+	fmt.Println("file", file)
 }

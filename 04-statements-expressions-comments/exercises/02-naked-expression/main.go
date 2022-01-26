@@ -19,4 +19,6 @@ package main
 
 func main() {
 	// ?
+	//"Hello"
+	// error is "Hello" evaluated but not used
 }

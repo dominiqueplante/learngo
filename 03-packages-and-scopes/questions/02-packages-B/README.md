@@ -1,40 +1,54 @@
 ## Which one below is a correct package type in Go?
-* Empty package
-* Executable package *CORRECT*
-* Transferrable package
-* Librarian package
+1. Empty package
+2. Executable package
+3. Transferrable package
+4. Librarian package
+
+Correct Answer: 2
 
 ## Which package type `go run` can execute?
-* Empty package
-* Executable package *CORRECT*
-* Transferrable package
-* Library package
+1. Empty package
+2. Executable package
+3. Transferrable package
+4. Library package
+
+Correct Answer: 2
 
 ## Which package type that `go build` can compile?
-* Empty package
-* Temporary package
-* Both of executable and library packages *CORRECT*
-* Transferrable package
+1.Empty package
+2.Temporary package
+3.Both of executable and library packages
+4.Transferrable package
+
+Correct Answer: 2
 
 ## Which one is an executable package?
-* `package main` with `func main` *CORRECT*
-* `package Main` with `func Main`
-* `package exec` with `func exec`
+1.`package main` with `func main`
+2.`package Main` with `func Main`
+3.`package exec` with `func exec`
+
+Correct Answer: 1
 
 ## Which one is a library package?
-* `main package`
-* `package lib` *CORRECT*
-* `func package`
-* `package main` with `func main`
+1. `main package`
+2.`package lib` 
+3.`func package`
+4.`package main` with `func main`
+
+Correct Answer: 2
 
 ## Which package is used for an executable Go program?
-* Empty package
-* Executable package *CORRECT*
-* Transferrable package
-* Library package
+1. Empty package
+2. Executable package
+3. Transferrable package
+4. Library package
 
-## Which package is used for reusability and can be imported? 
-* Empty package
-* Executable package
-* Transferrable package
-* Library package *CORRECT*
+Correct Answer: 2
+
+## Which package is used for reusability and can be imported?
+1. Empty package
+2. Executable package
+3. Transferrable package
+4. Library package
+
+Correct Answer: 4

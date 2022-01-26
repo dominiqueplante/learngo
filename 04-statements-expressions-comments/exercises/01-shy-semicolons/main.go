@@ -7,6 +7,7 @@
 // Follow me on twitter: https://twitter.com/inancgumus
 
 package main
+import "fmt"
 
 // ---------------------------------------------------------
 // EXERCISE: Shy Semicolons
@@ -19,4 +20,8 @@ package main
 // ---------------------------------------------------------
 
 func main() {
+	fmt.Println("hello"); fmt.Println("world");
+
+	fmt.Println("inanc"); fmt.Println("lina"); fmt.Println("ebru");
+
 }

@@ -8,6 +8,13 @@
 
 package main
 
+import (
+	"fmt"
+	"os"
+	"strconv"
+	"strings"
+)
+
 // ---------------------------------------------------------
 // EXERCISE: Math Tables
 //
@@ -105,4 +112,75 @@ package main
 // ---------------------------------------------------------
 
 func main() {
+	if len(os.Args) == 1 {
+		fmt.Println("Usage: [op=*/+-] [size]")
+		return
+	}
+
+	if len(os.Args) == 2 {
+		fmt.Println("Size is missing")
+		fmt.Println("Usage: [op=*/+-] [size]")
+		return
+	}
+
+	index := strings.IndexAny(os.Args[1], "+-/*")
+	if index == -1 {
+		fmt.Println("Invalid operator")
+		fmt.Println("Valid ops one of: */+-")
+		return
+	}
+
+	max, err := strconv.Atoi(os.Args[2])
+	if err != nil {
+		fmt.Println("Size is missing")
+		return
+	}
+	if max < 1 {
+		fmt.Println("Wrong size")
+		return
+	}
+
+	var op int
+	switch os.Args[1] {
+	case "+":
+		op = 0
+	case "-":
+		op = 1
+	case "/":
+		op = 2
+	case "*":
+		op = 3
+	}
+
+	// print the header
+	fmt.Printf("%5s", os.Args[1])
+	for i := 0; i <= max; i++ {
+		fmt.Printf("%5d", i)
+	}
+	fmt.Println()
+
+	for i := 0; i <= max; i++ {
+		// print the vertical header
+		fmt.Printf("%5d", i)
+
+		// print the cells
+		for j := 0; j <= max; j++ {
+			switch op {
+			case 0:
+				fmt.Printf("%5d", i+j)
+			case 1:
+				fmt.Printf("%5d", i-j)
+			case 2:
+				if j == 0 {
+					fmt.Printf("%5d", 0)
+				} else {
+					fmt.Printf("%5d", i/j)
+				}
+
+			case 3:
+				fmt.Printf("%5d", i*j)
+			}
+		}
+		fmt.Println()
+	}
 }

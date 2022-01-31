@@ -11,7 +11,6 @@ package main
 import (
 	"fmt"
 	"os"
-	"path/filepath"
 	"strings"
 )
 
@@ -86,17 +85,17 @@ import (
 //    #2 : "/Users/inanc/go/bin"
 // ---------------------------------------------------------
 
-func main() {
-	query := os.Args[1:]
-	words := filepath.SplitList(os.Getenv("PATH"))
-	for _, q := range query {
-		for i, w := range words {
-			q, w = strings.ToLower(q), strings.ToLower(w)
-
-			if strings.Contains(w, q) {
-				fmt.Printf("%d: %q", i, w)
-				fmt.Println()
-			}
+func main2() {
+	arg := os.Args[1]
+	lower_arg := strings.ToLower(arg)
+	path := os.Getenv("PATH")
+	paths := strings.Split(path, ":")
+	for i, currentpath := range paths {
+		lowered := strings.ToLower(currentpath)
+		if strings.Contains(lowered, lower_arg) {
+			fmt.Printf("%d: %q", i, currentpath)
+			fmt.Println()
 		}
 	}
+
 }

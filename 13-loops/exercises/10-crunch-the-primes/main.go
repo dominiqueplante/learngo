@@ -8,6 +8,12 @@
 
 package main
 
+import (
+	"fmt"
+	"os"
+	"strconv"
+)
+
 // ---------------------------------------------------------
 // EXERCISE: Crunch the primes
 //
@@ -33,5 +39,47 @@ package main
 //    2 3 5 7
 // ---------------------------------------------------------
 
+func isPrime(n int) bool {
+	if n == 2 || n == 3 {
+		return true
+	}
+
+	if n%2 == 0 {
+		return false
+	}
+
+	if n%3 == 0 {
+		return false
+	}
+
+	i := 5
+	w := 2
+	for {
+		if i*i > n {
+			break
+		}
+
+		if n%i == 0 {
+			return false
+		}
+
+		i += w
+		w = 6 - w
+	}
+
+	return true
+}
+
 func main() {
+	nums := os.Args[1:]
+	for _, current := range nums {
+		currentInt, err := strconv.Atoi(current)
+		if err != nil {
+			//fmt.Printf("%d is not a valid number.\n", current)
+			continue
+		}
+		if isPrime(currentInt) {
+			fmt.Printf("%d ", currentInt)
+		}
+	}
 }

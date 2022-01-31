@@ -39,6 +39,7 @@ import (
 //    2 3 5 7
 // ---------------------------------------------------------
 
+// bsaed on https://stackoverflow.com/questions/1801391/how-to-create-the-most-compact-mapping-n-%e2%86%92-isprimen-up-to-a-limit-n/1801446#1801446
 func isPrime(n int) bool {
 	if n == 2 || n == 3 {
 		return true

@@ -8,6 +8,12 @@
 
 package main
 
+import (
+	"fmt"
+	"os"
+	"strings"
+)
+
 // ---------------------------------------------------------
 // STORY
 //  You want to write a program that will manipulate a
@@ -43,6 +49,31 @@ package main
 //    Unknown command: "genius"
 // ---------------------------------------------------------
 
-func main() {
+const (
+	usage1 = "[command] [string]"
+	usage2 = "Available commands: lower, upper and title"
+)
 
+func main() {
+	args := os.Args
+
+	if len(args) != 3 {
+		fmt.Println(usage1)
+		fmt.Println()
+		fmt.Println(usage2)
+		return
+	}
+
+	command, inputString := args[1], args[2]
+
+	switch command {
+	case "lower":
+		fmt.Println(strings.ToLower(inputString))
+	case "upper":
+		fmt.Println(strings.ToUpper(inputString))
+	case "title":
+		fmt.Println(strings.Title(inputString))
+	default:
+		fmt.Printf(" Unknown command: %s", command)
+	}
 }
